@@ -87,3 +87,7 @@ form_armor_admin_planformation_supp:
     path:     /admin/planformation/supp/{id}
     defaults:
         _controller: FormArmorBundle:Admin:suppPlanFormation
+
+form_armor_admin_validation_inscription:
+    path:     /admin/validation
+    defaults: { _controller: FormArmorBundle:Admin:validationInscription }

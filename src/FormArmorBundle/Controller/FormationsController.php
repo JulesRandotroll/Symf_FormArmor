@@ -41,5 +41,7 @@ class FormationsController extends Controller
 		  'page'        => $page,
 		));
 		
-    }
+		}
+		
+		
 }
