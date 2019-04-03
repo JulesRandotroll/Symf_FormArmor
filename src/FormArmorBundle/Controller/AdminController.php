@@ -21,8 +21,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends Controller
 {
-	public function authentifAction(Request $request) // Affichage du formulaire d'authentification
-	{
+    public function authentifAction(Request $request) // Affichage du formulaire d'authentification
+    {
         
 		// Création du formulaire
 		$client = new Client();
@@ -54,7 +54,7 @@ class AdminController extends Controller
 		
 		// Si formulaire pas encore soumis ou pas valide (affichage du formulaire)
 		return $this->render('FormArmorBundle:Admin:connection.html.twig', array('form' => $form->createView()));
-	}
+    }
 	
 	// Gestion des statuts
 	public function listeStatutAction($page)
@@ -593,7 +593,7 @@ class AdminController extends Controller
 		return $this->render('FormArmorBundle:Admin:formPlan.html.twig', array('form' => $form->createView(), 'action' => 'modification'));
     }
 	public function suppPlanFormationAction($id, Request $request) // Affichage du formulaire de suppression d'un plan de formation
-	{
+    {
         // Récupération du plan de formation d'identifiant $id
 		$em = $this->getDoctrine()->getManager();
 		$rep = $em->getRepository('FormArmorBundle:Plan_formation');
@@ -629,11 +629,5 @@ class AdminController extends Controller
 		}
 		// Si formulaire pas encore soumis ou pas valide (affichage du formulaire)
 		return $this->render('FormArmorBundle:Admin:formPlan.html.twig', array('form' => $form->createView(), 'action' => 'SUPPRESSION'));
-	}
-		
-		// Gestion des Inscriptions temporaire (Mission 4)
-	public function validationInscriptionAction()
-	{
-		return $this->render('FormArmorBundle:Admin:ValidationInscription.html.twig');
-	}
+    }
 }
